@@ -1,8 +1,10 @@
 .banner {
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   padding: 150px 0;
-  background-image: asset-url("banner-img.jpg");
+  background-image: -webkit-linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), asset-url("banner-img.jpg");
+  background-image: -o-linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), asset-url("banner-img.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), asset-url("banner-img.jpg");
 }
 
 .banner h1 {
