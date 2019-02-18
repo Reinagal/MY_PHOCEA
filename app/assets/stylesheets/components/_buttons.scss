@@ -1,0 +1,13 @@
+.btn-light-blue {
+  color: white;
+  background-color: $light-blue;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(150,150,150,1);
+  font-weight: 550;
+  opacity: 0.8;
+  &:hover {
+    color: white;
+    opacity: 1;
+    transition: 0.5s ease;
+  }
+}
