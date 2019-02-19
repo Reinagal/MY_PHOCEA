@@ -5,9 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
   has_many :bookings, dependent: :destroy
   has_many :yachts, dependent: :destroy
-  validates :first_name, presence: true, uniqueness: { scope: :last_name }
-  validates :last_name, presence: true
-  validates :email, presence: true, uniqueness: true, format: { with: /\A.*@.*\.com\z/ }
-  validates :encrypted_password, presence: true
+  # validates :first_name, presence: true, uniqueness: { scope: :last_name }
+  # validates :last_name, presence: true
+  # validates :email, presence: true, uniqueness: true, format: { with: /\A.*@.*\.com\z/ }
+  # validates :encrypted_password, presence: true
   mount_uploader :photo, PhotoUploader
 end
