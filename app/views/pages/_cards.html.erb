@@ -1,15 +1,16 @@
-<div class="cards">
-  <div class="card-category" >
-    <!-- Remplacer la div ci-dessous en y mettant le lien vers les images uploadés (attention conserver la class) -->
-    <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://s1-ssl.dmcdn.net/Nvr8Z/x1080-QKH.jpg)">
-    </div>
-    <div class="card-description">
-      <h2>Le Phocea</h2>
-      <ul class="list-inline">
-        <li class="list-inline-item"><i class="fas fa-anchor"></i>&nbsp;Port de Marseille</li>
-        <li class="list-inline-item"><i class="fas fa-users"></i>&nbsp;6</li>
-        <li class="list-inline-item"><i class="fas fa-euro-sign"></i>&nbsp;20 000</li>
-      </ul>
+<% yachts.each do |yacht| %>
+  <div class="cards">
+    <div class="card-category" >
+      <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://s1-ssl.dmcdn.net/Nvr8Z/x1080-QKH.jpg)">
+      </div>
+      <div class="card-description">
+        <h2><%= yacht.name %></h2>
+        <ul class="list-inline">
+          <li class="list-inline-item"><i class="fas fa-anchor"></i>&nbsp;<%= yacht.port %></li>
+          <li class="list-inline-item"><i class="fas fa-users"></i>&nbsp;<%= yacht.passengers_capacity %></li>
+          <li class="list-inline-item"><i class="fas fa-euro-sign"></i>&nbsp;<%= yacht.price %></li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
