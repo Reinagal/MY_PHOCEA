@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :email, presence: true, uniqueness: true, format: { with: /\A.*@.*\.com\z/ }
   validates :encrypted_password, presence: true
+  mount_uploader :photo, PhotoUploader
 end
