@@ -8,4 +8,5 @@ class User < ApplicationRecord
   validates :first_name, presence: true, uniqueness: { scope: :last_name }
   validates :last_name, presence: true
   validates :email, presence: true, uniqueness: true, format: { with: /\A.*@.*\.com\z/ }
+  validates :encrypted_password, presence: true
 end
